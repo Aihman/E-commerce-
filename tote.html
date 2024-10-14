@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>   
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"  href="img/glob2.png">
+</head>
+<body> 
+    
+<section id="header">
+    <a href="#" class="logo">VarietyVault</a>
+    <nav class="navbar">
+ <div class="container">
+   <ul id="nav-links">
+       <li><a href="index.html">Home</a></li>
+       <li><a class="active" href="shop.html">Shop</a></li>
+       <li><a href="About.html">About</a></li>
+       <li><a href="Contact.html">Contact</a></li>
+       <a href="cartshopping.html"><i class="fa-solid fa-bag-shopping"></i></a>
+       <a href="Sign.html"><i class="fa-solid fa-user"></i></a>
+    </ul>
+ </div>
+</nav>
+</section>
+
+<section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+         <img src="img/totebag2.jpg" width="100%" id="MainImg" alt="Main Image">
+
+     <div class="small-img-group">
+         <div class="small-img-col">
+            <img src="img/totebag2.jpg" width="100%" class="small-img" alt="Small Image 1">
+         </div>
+         <div class="small-img-col">
+           <img src="img/totebag1.jpg" width="100%" class="small-img" alt="Small Image 2">
+         </div>
+         <div class="small-img-col">
+            <img src="img/totebag3.webp" width="100%" class="small-img" alt="Small Image 3">
+          </div>
+          <div class="small-img-col">
+            <img src="img/totebag3.webp" width="100%" class="small-img" alt="Small Image 4">
+          </div>
+     </div>
+    </div>
+
+    <div class="single-pro-details">
+        <h5>Tote</h5>
+        <h4 id="productTitle">Unisex tote bags</h4>
+        <h2 id="productPrice">R199.99</h2>
+        
+        <select id="sizeSelect">
+            <option>Select Size</option>
+            <option>Small</option>
+            <option>Large</option>
+        </select>
+        
+        <input type="number" id="quantityInput" min="1" placeholder="Enter quantity" value="1">
+        <button id="addToCartButton">Add to Cart</button>
+        <a href="cartshopping.html" class="cart-link"><i class="fa-solid fa-cart-shopping"></i></a>
+        <h4>Product Details</h4>
+        <span id="productDetails">The Gilden Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd.
+            The weight of the t-shirt is a considerable factor to pay attention to when looking at Gildan t-shirts, as that will give you a better idea of the durability of the tee. It's also important to note that the Canadian metric system measures ounces differently from the American metric system, so depending on which source you're looking at (Canadian or American) the measurements may look a little different. We’re going to dive into the top four material blends that Gildan makes to give you some insights into which one would be the best for your custom apparel needs.
+        </span>
+    </div>
+
+ 
+</section>
+
+<section id="product1" class="section-p1">
+
+    <div class="pro-container">
+        <div class="pro" onclick="window.location.href='dproduct.html';">
+            <img src="img/dress1.png" alt="">
+            <div class="des">
+                <span>Dress</span>
+                <h5>Long sleeve Dresss</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>R467.80</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+
+
+        <div class="pro" onclick="window.location.href='bag.html';">
+            <img src="img/luggage1.png" alt="">
+            <div class="des">
+                <span>Bags</span>
+                <h5>Travel Bag sports Training</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>R285.50</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+
+        <div class="pro" onclick="window.location.href='pant.html';">
+            <img src="img/pants1.png" alt="">
+            <div class="des">
+                <span>Pants</span>
+                <h5>Men's Fashion Pants</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>R385.50</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+
+        <div class="pro" onclick="window.location.href='hoodies.html';">
+            <img src="img/hoodie1.png" alt="">
+            <div class="des">
+                <span>Hoodies</span>
+                <h5>Anime Fashion</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>R320.50</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+
+        
+       
+</section>
+
+<section id="newsletter" class="section-p1 section-m1" >
+    <div class="newstext">
+     <h4>Sign Up For Newsletters</h4>
+     <p>Get Email updates about our latest shop and <span>Special offers.</span></p>
+    </div>
+     <div class="form">
+      <input type="text" placeholder="Your email address">
+      <button class="normal">Sign Up</button>
+
+     </div>
+
+</section>
+
+<footer class="section-p1">
+     <div class="col">
+        <a href="#" class="logo">VarietyVault</a>
+        <h4>Contact</h4>
+        <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Francisco</p>
+        <p><strong>Phone: </strong> +01 2222 683 /(+91) 01 4584 6879</p>
+        <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="copyright">
+                <p>© 2024, <span>GLOBAL</span> - E-commerce website </p>
+             </div>
+            
+        </div>
+     </div>
+   <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions </a>
+      <a href="#">Contact us</a>
+   </div>
+   
+   <div class="col">
+       <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order </a>
+        <a href="#">Help</a>
+   </div>
+   
+   <div class="col-install">
+    <h4> Install App </h4>
+    <p>From App Store or Google</p>
+     <div class="row">
+          <img src="img/appstore.png" alt="">
+          <img src="img/googlestore.png" alt="">
+     </div>
+     <p>Secured Payment  Gateways </p>
+     <img src="img/visaacard.png" alt="">
+
+   </div>
+
+
+
+</footer>
+
+
+
+
+
+
+<script>
+
+        var MainImg = document.getElementById("MainImg");
+        var smallimg = document.getElementsByClassName("small-img");
+    
+         smallimg[0].onclick = function() {
+            MainImg.src = smallimg[0].src;
+         }
+         smallimg[1].onclick = function() {
+            MainImg.src = smallimg[1].src;
+         }
+         smallimg[2].onclick = function() {
+            MainImg.src = smallimg[2].src;
+         }
+         smallimg[3].onclick = function() {
+            MainImg.src = smallimg[3].src;
+         }
+         const product = {
+            name: "Men's Fashion T Shirt",
+            price: 200,
+            image: "img/flowshirt10.png"
+        };
+        document.getElementById('addToCartButton').addEventListener('click', function() {
+            // Get the product details
+            const title = document.getElementById('productTitle').innerText;
+            const price = document.getElementById('productPrice').innerText;
+            const size = document.getElementById('sizeSelect').value;
+            const quantity = document.getElementById('quantityInput').value;
+            const imageSrc = document.getElementById('MainImg').src; // Get the image URL
+    
+            // Check if a size is selected
+            if (size === 'Select Size') {
+                alert('Please select a size.');
+                return;
+            }
+    
+            // Create an item object
+            const cartItem = {
+                title: title,
+                price: price,
+                size: size,
+                quantity: parseInt(quantity, 10),
+                image: imageSrc // Add the image URL
+            };
+    
+            // Get the existing cart from local storage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            // Check if the item already exists in the cart
+            const existingItemIndex = cart.findIndex(item => item.title === cartItem.title && item.size === cartItem.size);
+    
+            if (existingItemIndex >= 0) {
+                // Update the quantity if the item already exists
+                cart[existingItemIndex].quantity += cartItem.quantity;
+            } else {
+                // Add the new item to the cart
+                cart.push(cartItem);
+            }
+    
+            // Save the updated cart back to local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+    
+            // Redirect to the cart page
+            window.location.href = 'cartshopping.html';
+        });
+    
+
+</script>
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Login & Signup Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body id="part2" >
+    
+    <section class="wrapper">
+      <div class="form signup">
+        <header>Signup</header>
+        <form id="signupForm" method="post" action="signup"></form>
+          <input type="text" id="signupName"placeholder="Full name" required/>
+          <input type="text" id="signupEmail"placeholder="Email address" required/>
+          <input type="password" id="signupPassword"placeholder="Password" required  />
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck" required/>
+            <label for="signupCheck">I accept all terms & conditions</label>
+          
+          <input type="submit" value="Signup" />
+        </form>
+      </div>
+
+      <div class="form login">
+        <header>Login</header>
+        <form id="loginForm">
+          <input type="text" id="loginEmail" placeholder="Email address" required />
+          <input type="password" id="loginPassword" placeholder="Password" required/>
+          <a href="#">Forgot password?</a>
+          <input type="submit" value="Login" />
+        </form>
+
+      </div>
+</section>
+
+       
+      <script>
+        
+       // script.js
+const wrapper = document.querySelector(".wrapper"),
+signupHeader = document.querySelector(".signup header"),
+loginHeader = document.querySelector(".login header");
+
+loginHeader.addEventListener("click", () => {
+wrapper.classList.add("active");
+});
+
+signupHeader.addEventListener("click", () => {
+wrapper.classList.remove("active");
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const signupForm = document.getElementById('signupForm');
+  const loginForm = document.getElementById('loginForm');
+
+  signupForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+
+    // Store user data in localStorage
+    localStorage.setItem('user', JSON.stringify({ name, email, password }));
+    alert('Signup successful');
+  });
+
+  loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    // Retrieve user data from localStorage
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+
+    if (storedUser && storedUser.email === email && storedUser.password === password) {
+      alert('Login successful');
+    } else {
+      alert('Invalid email or password');
+    }
+  });
+});
+  
+
+      </script>
+    
+  </body>
+</html>

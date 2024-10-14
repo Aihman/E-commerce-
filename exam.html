@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css" />
+
+</head>
+<body id="3">
+    <form id="userForm">
+        <label for="phone">Cell Phone Number:</label>
+        <input type="text" id="phone" name="phone">
+        <br>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="errorMessage" style="color:red;"></p>
+
+
+
+
+
+
+
+<script src="signup.js">
+
+    form.addEventListener('submit', function(event)){
+        event.preventDefault();
+
+        let isPhoneEmpty =checkEmpty(phoneInput);
+        let isEmailEmpty =checkEmpty(emailEmpty);
+
+   if (isPhoneEmpty || isEmailEmpty){
+       errorMessage.textContent = 'please fill in the fileds.';
+       return;
+   }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+</script>
+</body>
+</html>

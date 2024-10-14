@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>   
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"  href="img/glob2.png">
+</head>
+<body>
+
+<section id="header">
+        <a href="#" class="logo">VarietyVault</a>
+        <nav class="navbar">
+     <div class="container">
+       <ul id="nav-links">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="shop.html">Shop</a></li>
+           <li><a href="About.html">About</a></li>
+           <li><a href="Contact.html">Contact</a></li>
+           <a class="active" href="cartshopping.html"><i class="fa-solid fa-bag-shopping"></i></a>
+           <a href="Sign.html"><i class="fa-solid fa-user"></i></a>
+        </ul>
+     </div>
+   </nav>
+</section>
+
+
+ 
+
+
+<section id="cart" class="section-p1">
+    <h1>Your Shopping Cart</h1>
+    <div id="cartItems"></div>
+        <a href="sproduct.html">Continue Shopping <i class="fa-solid fa-chevron-right"></i></a>
+    
+</section>
+
+
+
+<section id="newsletter" class="section-p1 section-m1" >
+    <div class="newstext">
+     <h4>Sign Up For Newsletters</h4>
+     <p>Get Email updates about our latest shop and <span>Special offers.</span></p>
+    </div>
+     <div class="form">
+      <input type="text" placeholder="Your email address">
+      <button class="normal">Sign Up</button>
+
+     </div>
+
+</section>
+
+<footer class="section-p1">
+     <div class="col">
+        <a href="#" class="logo">VarietyVault</a>
+        <h4>Contact</h4>
+        <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Francisco</p>
+        <p><strong>Phone: </strong> +01 2222 683 /(+91) 01 4584 6879</p>
+        <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="copyright">
+                <p>© 2024, <span>GLOBAL</span> - E-commerce website </p>
+             </div>
+            
+        </div>
+     </div>
+   <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions </a>
+      <a href="#">Contact us</a>
+   </div>
+   
+   <div class="col">
+       <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order </a>
+        <a href="#">Help</a>
+   </div>
+   
+   <div class="col-install">
+    <h4> Install App </h4>
+    <p>From App Store or Google</p>
+     <div class="row">
+          <img src="img/appstore.png" alt="">
+          <img src="img/googlestore.png" alt="">
+     </div>
+     <p>Secured Payment  Gateways </p>
+     <img src="img/visaacard.png" alt="">
+
+   </div>
+
+
+
+</footer>
+
+
+
+
+
+
+<script >
+ // Function to display cart items
+ function displayCartItems() {
+     // Get the cart from local storage
+     const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+     // Get the container to display the cart items
+     const cartItemsContainer = document.getElementById('cartItems');
+
+     // Clear previous cart content
+     cartItemsContainer.innerHTML = '';
+
+     // Generate the cart items HTML
+     if (cart.length > 0) {
+         cart.forEach((item, index) => {
+             const itemDiv = document.createElement('div');
+             itemDiv.classList.add('cart-item');
+             itemDiv.innerHTML = `
+                 <img src="${item.image}" alt="${item.title}">
+                 <div>
+                     <h3>${item.title}</h3>
+                     <p>Size: ${item.size}</p>
+                     <p>Price: ${item.price}</p>
+                     <p>Quantity: ${item.quantity}</p>
+                 </div>
+                 <button onclick="removeCartItem(${index})">Remove</button>
+             `;
+             cartItemsContainer.appendChild(itemDiv);
+         });
+     } else {
+         cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+     }
+ }
+
+ // Function to remove item from cart
+ function removeCartItem(index) {
+     // Get the cart from local storage
+     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+     // Remove the item at the specified index
+     cart.splice(index, 1);
+
+     // Save the updated cart back to local storage
+     localStorage.setItem('cart', JSON.stringify(cart));
+
+     // Re-display the updated cart
+     displayCartItems();
+ }
+
+ // Initial display of cart items
+ document.addEventListener('DOMContentLoaded', displayCartItems);
+       
+</script>
+    
+
+
+
+
+
+</body>
+</html>
+
